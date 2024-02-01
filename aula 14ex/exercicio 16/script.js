@@ -10,10 +10,22 @@ function contar() {
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
+        if (p<=0){
+            window.alert(`Passo inválido, considerando PASSO 1`)
+            p = 1
+        }
         
-        for(let c = i; c <= f; c += p) {
-            res.innerHTML += ` ${c} \u{1f449} `
+        if{
+            for(let c = i; c <= f; c += p) {
+                res.innerHTML += ` ${c} \u{1f449} `
+            }
+            
+        }else {
+            for (let c=i; c>=f; c-=p) {
+                res.innerHTML += `${c} \u{1f449}`
+            }
         }
         res.innerHTML += ` \u{1f3c1}`
+        
     }
 }
